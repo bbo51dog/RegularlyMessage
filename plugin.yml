@@ -1,0 +1,6 @@
+name: RegularlyMessage
+api: [3.0.0]
+main: regularlymessage\Main
+version: 1.0.4
+description: Send messages on a regular basis
+author: bboyyu51
