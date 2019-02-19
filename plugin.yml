@@ -1,7 +1,7 @@
 name: RegularlyMessage
 api: [3.0.0]
 main: regularlymessage\Main
-version: 1.0.4
+version: 1.0.5
 description: Send your messages regularly
 author: bboyyu51
 website: https://github.com/bboyyu51
