@@ -1,6 +1,6 @@
 <?php
 
-namespace regularymessage;
+namespace regularlymessage;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\Player;
@@ -22,14 +22,14 @@ class main extends PluginBase{
 		]);
 
 		$sec = $this->config->get("RepeatSeconds");
-		$sec = $sec*20;
+		$sec = $sec * 20;
 		$this->getScheduler()->scheduleRepeatingTask(new CallbackTask([$this,"SendTask"]), $sec);
 	}
 
 	public function SendTask(){
 		$message_num = $this->config->get("Number of messages");
 		$rand = mt_rand(1, $message_num);
-		$message = $this->config->get("$rand");
-		$this->getServer()->broadcastMessage("§a[定期]§b.{$message});
+		$message = $this->config->get($rand);
+		$this->getServer()->broadcastMessage("§a[定期]§b".$message);
 	}
 }

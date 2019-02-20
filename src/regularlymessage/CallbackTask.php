@@ -19,7 +19,7 @@
  *
 */
 
-namespace regularymessage;
+namespace regularlymessage;
 
 use pocketmine\scheduler\Task;
 
