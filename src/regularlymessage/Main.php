@@ -11,14 +11,12 @@ use pocketmine\utils\Config;
 class main extends PluginBase{
 	public function onEnable(){
 		$this->getLogger()->info("§aこのプラグインはMITライセンスにより配布されています");
-		$this->config = new Config($this->getDataFolder() . "config.yml", Config::YAML,[
+		$this->config = new Config($this->getDataFolder() . "Regularly.yml", Config::YAML,[
 			'RepeatSeconds' => 90,
-			'Number of messages' => 5,
-			'1' => 'message1',
-			'2' => 'message2',
-			'3' => 'message3',
-			'4' => 'message4',
-			'5' => 'message5',
+			'Messages' => [
+				'RegularlyMessageを使って頂きありがとうございます',
+				'メッセージを変更するには、Config.ymlを編集した後に再起動してください',
+			]
 		]);
 
 		$sec = $this->config->get("RepeatSeconds");
@@ -27,9 +25,8 @@ class main extends PluginBase{
 	}
 
 	public function SendTask(){
-		$message_num = $this->config->get("Number of messages");
-		$rand = mt_rand(1, $message_num);
-		$message = $this->config->get($rand);
+		$messages = $this->config->get('Messages');
+		$message = $messages[array_rand($messages)];
 		$this->getServer()->broadcastMessage("§a[定期]§b".$message);
 	}
 }
