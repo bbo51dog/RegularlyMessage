@@ -3,10 +3,9 @@
 namespace regularlymessage;
 
 use pocketmine\plugin\PluginBase;
-use pocketmine\scheduler\Task;
 use pocketmine\utils\Config;
 
-class main extends PluginBase{
+class Main extends PluginBase{
 	public function onEnable(){
 		$this->getLogger()->info("§aこのプラグインはMITライセンスにより配布されています");
 		$this->config = new Config($this->getDataFolder() . "Regularly.yml", Config::YAML,[
