@@ -3,9 +3,7 @@
 namespace regularlymessage;
 
 use pocketmine\plugin\PluginBase;
-use pocketmine\Player;
 use pocketmine\scheduler\Task;
-use pocketmine\utils\Utils;
 use pocketmine\utils\Config;
 
 class main extends PluginBase{
