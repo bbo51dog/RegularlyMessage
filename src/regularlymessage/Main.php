@@ -12,7 +12,7 @@ class Main extends PluginBase{
 			'RepeatSeconds' => 90,
 			'Messages' => [
 				'RegularlyMessageを使って頂きありがとうございます',
-				'メッセージを変更するには、Config.ymlを編集した後に再起動してください',
+				'メッセージを変更するには、Regularly.ymlを編集した後に再起動してください',
 			]
 		]);
 
