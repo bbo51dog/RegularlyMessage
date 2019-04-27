@@ -6,13 +6,12 @@ use pocketmine\Server;
 use pocketmine\scheduler\Task;
 
 class SendTask extends Task{
-	public function __construct(Main $main){
-		$this->main = $main;
+	public function __construct(array $messages){
+		$this->msgs = $messages;
 	}
 	
 	public function onRun(int $tick){
-		$messages = $this->main->config->get('Messages');
-		$message = $messages[array_rand($messages)];
+		$message = $this->msgs[array_rand($this->msgs)];
 		Server::getInstance()->broadcastMessage("§a[定期]§b".$message);
 	}
 }

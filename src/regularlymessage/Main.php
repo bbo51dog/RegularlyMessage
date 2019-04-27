@@ -18,6 +18,7 @@ class Main extends PluginBase{
 
 		$sec = $this->config->get("RepeatSeconds");
 		$sec = $sec * 20;
-		$this->getScheduler()->scheduleRepeatingTask(new SendTask($this), $sec);
+		$messages = $this->config->get('Messages');
+		$this->getScheduler()->scheduleRepeatingTask(new SendTask($messages), $sec);
 	}
 }
