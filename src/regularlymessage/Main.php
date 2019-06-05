@@ -13,12 +13,14 @@ class Main extends PluginBase{
 			'Messages' => [
 				'RegularlyMessageを使って頂きありがとうございます',
 				'メッセージを変更するには、Regularly.ymlを編集した後に再起動してください',
-			]
+			],
+			'Prefix' => '定期',
 		]);
 
 		$sec = $config->get("RepeatSeconds");
 		$sec = $sec * 20;
 		$messages = $config->get('Messages');
-		$this->getScheduler()->scheduleRepeatingTask(new SendTask($messages), $sec);
+		$prefix = $config->get('Prefix');
+		$this->getScheduler()->scheduleRepeatingTask(new SendTask($messages, $prefix), $sec);
 	}
 }
