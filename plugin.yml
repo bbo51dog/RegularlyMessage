@@ -1,8 +1,7 @@
 name: RegularlyMessage
-api: [3.0.0]
-main: regularlymessage\Main
+api: [4.0.0]
+main: bbo51dog\regularlymessage\Main
 version: 2.2.0
 description: Send your messages regularly
-author: bboyyu51
-website: https://github.com/bboyyu51
-load: POSTWORLD
+author: bbo51dog
+website: https://github.com/bbo51dog/RegularlyMessage
