@@ -11,7 +11,7 @@ class SendTask extends Task{
 		$this->prefix = $prefix;
 	}
 	
-	public function onRun(int $tick){
+	public function onRun(): void {
 		$message = $this->msgs[array_rand($this->msgs)];
 		Server::getInstance()->broadcastMessage("§a[".$this->prefix."]§b".$message);
 	}

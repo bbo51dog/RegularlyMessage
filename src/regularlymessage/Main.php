@@ -6,7 +6,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 
 class Main extends PluginBase{
-	public function onEnable(){
+	public function onEnable(): void {
 		$this->getLogger()->info("§aこのプラグインはMITライセンスにより配布されています");
 		$config = new Config($this->getDataFolder() . "Regularly.yml", Config::YAML,[
 			'RepeatSeconds' => 90,

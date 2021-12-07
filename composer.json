@@ -1,0 +1,9 @@
+{
+    "name": "bbo51dog/regularly_message",
+    "description": "Send message to pmmp server regularly",
+    "minimum-stability": "stable",
+    "license": "MIT",
+    "require": {
+        "pocketmine/pocketmine-mp": "4.*"
+    }
+}
